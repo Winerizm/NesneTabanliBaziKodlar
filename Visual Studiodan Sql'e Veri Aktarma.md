@@ -2,7 +2,7 @@
 
 isim örnek olarak IPersonellerService
 
-void Add(tabloİsmi1 nesneİsmi1 );
+void Add(tabloİsmi1 nesneİsmi1);
 
 
 - CLASS KODU:
@@ -13,12 +13,12 @@ isim örnek olarak PersonellerManager
 
    
 
-        RentACarOtomasyonuEntities1 RentACar = new RentACarOtomasyonuEntities1();
+        VeriTabanıİsmiEntity nesneİsmi2 = new VeriTabanıİsmiEntity;
 
-        public void Add(personeller personel)
+        public void Add(tabloİsmi1 nesneİsmi1)
         {
-            RentACar.Set<personeller>().Add(personel);
-            RentACar.SaveChanges();
+            nesneİsmi2.Set<tabloİsmi1>().Add(nesneİsmi1);
+            nesneİsmi2.SaveChanges();
         }
     
         
