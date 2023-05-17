@@ -1,0 +1,14 @@
+gridControlOgrenciler.DataSource = (from x in rh.Ogrenciler
+                                                select new
+                                                {
+                                                    
+                                                    x.Ad,
+                                                    x.Soyad,
+                                                    x.OkulNo,
+                                                    x.Telefon,
+                                                    x.Email,
+                                                    x.Sehirler.Sehir,
+                                                    x.Sinif,
+                                                    x.Cinsiyet,
+                                                    x.Ilceler.Ilce,
+                                                }).ToList();
