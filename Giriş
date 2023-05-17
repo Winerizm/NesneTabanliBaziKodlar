@@ -1,0 +1,12 @@
+var personel = RentACar.personeller.Where
+                (x => x.personel_kullaniciadi == textEdit1.Text && x.personel_sifre == textEdit2.Text).FirstOrDefault();
+            if (personel!=null)
+            {
+                MainMenu mainMenu = new MainMenu();
+                mainMenu.Show();
+                this.Hide();
+            }
+            else
+            {
+                XtraMessageBox.Show("Girilen kullanıcı adı veya şifre hatalı", "Sistem", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
