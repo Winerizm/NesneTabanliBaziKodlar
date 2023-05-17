@@ -1,4 +1,4 @@
-gridControlOgrenciler.DataSource = (from x in rh.Ogrenciler
+-gridControlOgrenciler.DataSource = (from x in rh.Ogrenciler
                                                 select new
                                                 {
                                                     
@@ -12,3 +12,14 @@ gridControlOgrenciler.DataSource = (from x in rh.Ogrenciler
                                                     x.Cinsiyet,
                                                     x.Ilceler.Ilce,
                                                 }).ToList();
+
+
+
+
+-Mdi parent:
+private void btnPersonelListesi_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
+        {
+            PersonelListesi personelListesi=new PersonelListesi();
+            personelListesi.MdiParent = this;   
+            personelListesi.Show();
+        }
