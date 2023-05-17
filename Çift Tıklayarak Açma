@@ -1,0 +1,27 @@
+private void gridView1_DoubleClick(object sender, EventArgs e)
+        {
+            //satırın her yerınde bu olayın tetıklenmesı  EditorShowMode Click OptionsBehavior.Editable seçeneğini false yaptık
+
+            OgrenciKayit ogrenciKayit =new OgrenciKayit();
+            ogrenciKayit.okulNo = int.Parse(gridView1.GetFocusedRowCellValue("OkulNo").ToString());
+            ogrenciKayit.deger = 1;
+            ogrenciKayit.ShowDialog();
+        }
+
+private void OgretmenKayit_Load(object sender, EventArgs e)
+        {
+            
+            if (kontrol==1)
+            {
+                var ogretmenBulunan = ogretmenManager.Bul(x => x.TC == tc);
+                txtAd.Text = ogretmenBulunan.Ad;
+                txtSoyad.Text = ogretmenBulunan.Soyad;
+                txtTc.Text = ogretmenBulunan.TC;
+                mskTxtCep.Text = ogretmenBulunan.Telefon;
+                lookUpEditBrans.Text = ogretmenBulunan.Branslar.BransAdi;
+                txtEmail.Text = ogretmenBulunan.Email;
+                rctxtAdres.Text = ogretmenBulunan.Adres;
+            }
+           
+
+        }
