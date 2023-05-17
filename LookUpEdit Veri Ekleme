@@ -1,0 +1,8 @@
+private void OgretmenKayit_Load(object sender, EventArgs e)
+        {
+            lookUpEditBrans.Properties.DataSource = (from x in rh.Branslar
+                                                     select new
+                                                     {
+                                                         x.ID,
+                                                         x.BransAdi
+                                                     }).ToList();
