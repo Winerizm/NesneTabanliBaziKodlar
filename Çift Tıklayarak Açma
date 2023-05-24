@@ -25,3 +25,12 @@ private void OgretmenKayit_Load(object sender, EventArgs e)
            
 
         }
+        
+        Manager:
+        
+        public araclar Bul(Expression<Func<araclar, bool>> where)
+        {
+            return RentACar.Set<araclar>().FirstOrDefault(where);
+        }
+        
+        Not: Buraya yazılan kodla rtemsilidir kendinize göre değiştiriniz.
